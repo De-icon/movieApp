@@ -25,7 +25,56 @@
 
 body{
     background: #000;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
+.result{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    padding: 50px;
+
+
+    h1{
+        margin-bottom: 30px;
+    }
+
+    .result-movies{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .movie{
+            width: 193px;
+            height: 300px;
+            border-radius: 8px;
+            background: #1A1F38;
+            
+    
+            img{
+                width: inherit;
+                border-radius: 8px 8px 0 0;
+            }
+            h4, p{
+                margin-left: 10px;
+                font-size: 14px;
+            }
+            p{
+                font-weight: 200;
+    
+            }
+        }
+    }
+    
+
+}
+
+
 nav{
     display: flex;
     justify-content: space-between;
@@ -35,6 +84,7 @@ nav{
     position: fixed;
     background: #1A1F38;
     top: 0;
+    z-index: 1;
 
     .logo{
         font-size:1.8rem ;
@@ -59,7 +109,7 @@ nav{
         input{
             outline:none;
             border:none;
-            width:270px;
+            width:260px;
             height: inherit;
             padding: 0  10px;
             font-family:'Open Sans', sans-serif;
@@ -72,6 +122,7 @@ nav{
             background: transparent;
             outline:none;
             border:none;
+            cursor: pointer;
             img{
                 width: 30px;
             }
@@ -83,18 +134,20 @@ main{
     margin: 60px 0;
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    // background-color: ;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: url(/img/avatar.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px;
+    
     
     .hero{
         margin-top: 40px;
         max-width: 500px;
-
+        text-align: center;
         h1{
             font-size: 2.5rem;
             font-weight: 700;
@@ -133,7 +186,7 @@ main{
             display: flex;
             align-items: center;
             gap: 10px;
-
+            cursor: pointer;
             .movie{
                 width: 193px;
                 height: 300px;
@@ -175,6 +228,36 @@ footer{
         }
     }
     h3{
-        font-weight: 500;
+        font-weight: 300;
+        font-size: .9rem;
+    }
+}
+@media(max-width: 650px) {
+    nav{
+    .logo{
+        font-size: 1.3rem;
+    }
+    padding: 10px 20px;
+    }
+
+    .result{
+        padding: 20px;
+    }
+    .treding{
+        padding: 0 20px;
+        h1{
+            font-size: 1.6rem;
+        }
+    }
+    footer{
+        padding: 20px;
+        .copyright{
+            h1{
+                font-size: 1.2rem;
+            }
+        }
+        h3{
+            font-size: .7rem;
+        }
     }
 }
