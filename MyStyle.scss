@@ -193,21 +193,27 @@ main{
                 height: 300px;
                 border-radius: 8px;
                 background: #1A1F38;
+                overflow: auto;
                 // padding: 5px;
     
                 img{
                     width: inherit;
-                    // height: inherit;
+                    height: 250px;
                     border-radius: 8px 8px 0 0;
                 }
-                h4, p{
+                div{
+                    width: 185px;
                     margin-left: 10px;
-                    font-size: 14px;
-                }
-                p{
-                    font-weight: 200;
 
+                    h4, p{
+                        font-size: 14px;
+                    }
+                    p{
+                        font-weight: 200;
+    
+                    }
                 }
+                
             }
         }
         
