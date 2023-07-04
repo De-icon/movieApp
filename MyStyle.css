@@ -117,7 +117,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(/img/avatar.jpg);
+  background-image: url(/img/batman.JPG);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -168,7 +168,6 @@ main .hero p {
   height: 300px;
   border-radius: 8px;
   background: #1A1F38;
-  overflow: auto;
 }
 .treding .scroll-container .scroll-content .movie img {
   width: inherit;
@@ -176,11 +175,11 @@ main .hero p {
   border-radius: 8px 8px 0 0;
 }
 .treding .scroll-container .scroll-content .movie div {
-  width: 185px;
   margin-left: 10px;
+  width: 180px;
 }
 .treding .scroll-container .scroll-content .movie div h4, .treding .scroll-container .scroll-content .movie div p {
-  font-size: 14px;
+  font-size: 12px;
 }
 .treding .scroll-container .scroll-content .movie div p {
   font-weight: 200;
