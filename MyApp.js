@@ -35,7 +35,18 @@ window.onload = () => {
   console.error(error);
 })
 }
+// search result 
 
+const result = document.querySelector('.result')
+const searchBtn = document.querySelector('.btn')
+const closeSearch = document.querySelector('.close')
+
+searchBtn.addEventListener("click", () => {
+  result.classList.add('active')
+})
+closeSearch.addEventListener("click", () => {
+  result.classList.remove('active')
+})
  
 // scroller
 

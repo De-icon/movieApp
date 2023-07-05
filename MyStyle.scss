@@ -29,7 +29,12 @@ body{
     height: 100%;
     position: relative;
 }
+
+.active{
+    display: block !important;
+}
 .result{
+    z-index: 2;
     display: none;
     position: absolute;
     top: 0;
@@ -37,12 +42,15 @@ body{
     height: 100%;
     background: #000;
     padding: 50px;
+    transition:  5ms;
 
 
-    h1{
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 30px;
     }
-
     .result-movies{
         display: flex;
         align-items: center;
@@ -125,7 +133,7 @@ nav{
             border:none;
             cursor: pointer;
             img{
-                width: 30px;
+                width: 50%;
             }
         }
         
@@ -243,6 +251,15 @@ footer{
         font-size: 1.3rem;
     }
     padding: 10px 20px;
+
+    .search_div{
+        width: 180px;
+        height: 35px;
+
+        input{
+            width: 145px;
+        }
+    }
     }
 
     .result{
