@@ -34,6 +34,43 @@ window.onload = () => {
   .catch(error => {
   console.error(error);
 })
+
+  
+
+fetch('https://imdb-top-100-movies1.p.rapidapi.com/',{
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '36d7c9de84msh6dc9183ee581734p1930c4jsnab8ca1caa87a',
+		'X-RapidAPI-Host': 'imdb-top-100-movies1.p.rapidapi.com'
+	}
+})
+  .then(response => response.json())
+  .then(data => {
+    const list = data.items;
+
+    list.map((item) => {
+      const image = item.thumbnail
+      const titel = item.title
+      const year = item.year
+
+      const movies = `<div class="movie">
+        <img src="${image}">
+        <div>
+        <h4>${titel} </h4>
+        <p>${year}</p>
+        </div>
+      </div>`
+      
+      document.getElementById("imbd").innerHTML += movies      
+    })
+  })
+  .catch(error => {
+  console.error(error);
+})
+
+
+
+  
 }
 // search result 
 
@@ -43,9 +80,9 @@ const closeSearch = document.querySelector('.close')
 
 searchBtn.addEventListener("click", () => {
   const searchInput = document.querySelector('#search-input').value
-  
+  const seracher = searchInput.toLowerCase();
   result.classList.add('active')
-    const url = `https://moviesdatabase.p.rapidapi.com/titles/search/keyword/${searchInput}`
+    const url = `https://moviesdatabase.p.rapidapi.com/titles/search/keyword/${seracher}`
     fetch(url,{
 	method: 'GET',
 	headers: {
