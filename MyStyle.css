@@ -82,7 +82,7 @@ nav {
   position: fixed;
   background: #1A1F38;
   top: 0;
-  z-index: 1;
+  z-index: 6;
 }
 nav .logo {
   font-size: 1.8rem;
