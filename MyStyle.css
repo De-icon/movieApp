@@ -59,13 +59,17 @@ body {
 }
 .result .result-movies .movie img {
   width: inherit;
+  height: 250px;
   border-radius: 8px 8px 0 0;
 }
-.result .result-movies .movie h4, .result .result-movies .movie p {
+.result .result-movies .movie div {
   margin-left: 10px;
-  font-size: 14px;
+  width: 180px;
 }
-.result .result-movies .movie p {
+.result .result-movies .movie div h4, .result .result-movies .movie div p {
+  font-size: 12px;
+}
+.result .result-movies .movie div p {
   font-weight: 200;
 }
 
@@ -126,7 +130,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(/img/batman.JPG);
+  background-image: url(/img/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

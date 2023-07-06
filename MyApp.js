@@ -42,10 +42,50 @@ const searchBtn = document.querySelector('.btn')
 const closeSearch = document.querySelector('.close')
 
 searchBtn.addEventListener("click", () => {
+  const searchInput = document.querySelector('#search-input').value
+  
   result.classList.add('active')
+    const url = `https://moviesdatabase.p.rapidapi.com/titles/search/keyword/${searchInput}`
+    fetch(url,{
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '36d7c9de84msh6dc9183ee581734p1930c4jsnab8ca1caa87a',
+		'X-RapidAPI-Host': 'moviesdatabase.p.rapidapi.com'
+	}
+})
+  .then(response => response.json())
+  .then(data => {
+    const list = data.results;
+
+    list.map((item) => {
+      const image = item.primaryImage.url
+      const titel = item.originalTitleText.text
+      const day = item.releaseDate.day
+      const month = item.releaseDate.month
+      const year = item.releaseDate.year
+
+      const movies = `<div class="movie">
+        <img src="${image}">
+        <div>
+        <h4>${titel} </h4>
+        <p>${day}-${month}-${year}</p>
+        </div>
+      </div>`
+
+      resultMovie = document.querySelector(".result-movies").innerHTML += movies      
+    })
+  })
+  .catch(error => {
+  console.error(error);
+})
+
+
+
 })
 closeSearch.addEventListener("click", () => {
   result.classList.remove('active')
+  resultMovie = document.querySelector(".result-movies").innerHTML = ''      
+
 })
  
 // scroller

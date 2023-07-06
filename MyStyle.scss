@@ -63,20 +63,24 @@ body{
             height: 300px;
             border-radius: 8px;
             background: #1A1F38;
-            
-    
+
             img{
                 width: inherit;
+                height: 250px;
                 border-radius: 8px 8px 0 0;
             }
-            h4, p{
+            div{
                 margin-left: 10px;
-                font-size: 14px;
+                width: 180px;
+                h4, p{
+                    font-size: 12px;
+                }
+                p{
+                    font-weight: 200;
+
+                }
             }
-            p{
-                font-weight: 200;
-    
-            }
+            
         }
     }
     
@@ -147,7 +151,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(/img/batman.JPG);
+    background-image: url(/img/hero.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
